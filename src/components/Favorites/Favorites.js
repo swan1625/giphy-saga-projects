@@ -18,7 +18,7 @@ function Favorites() {
       <ul>
       {favorites.map((favorite, i) => (
           <li key={i}>
-            {favorite.url}
+            <img src={favorite.url}></img>
           </li>
         ))}
       </ul>
