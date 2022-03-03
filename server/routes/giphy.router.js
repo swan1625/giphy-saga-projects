@@ -4,9 +4,11 @@ require("dotenv").config();
 
 const router = express.Router();
 
-router.get('/', (req,res) => {
-    axios.get(`http://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&q=${req.body.search}&limit=50`)
+router.get('/:id', (req,res) => {
+    console.log('req.params is', req.params);
+    axios.get(`http://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&q=${req.params.id}&limit=50`)
     .then( response => {
+        console.log('response is', response);
         res.send(response.data)
     }).catch( error => {
         console.log('Error on giphy get', error);
