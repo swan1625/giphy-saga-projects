@@ -42,6 +42,16 @@ const searchResults = (state = [], action) => {
     }
 };   
 
+// Favorites Reducer
+const favoritesList = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_FAVORITE':
+            return action.payload;
+        default:
+            return state;
+    }
+};
+
 
 
 
@@ -49,7 +59,8 @@ const searchResults = (state = [], action) => {
 
 const storeInstance = createStore(
     combineReducers({
-        searchResults
+        searchResults,
+        favoritesList
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
