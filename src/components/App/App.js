@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import NavBar from '../Navbar/NavBar';
+import NavBar from '../NavBar/NavBar';
 import Search from '../Search/Search';
 import Favorites from '../Favorites/Favorites';
 
