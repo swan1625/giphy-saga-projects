@@ -12,8 +12,8 @@ function Search() {
 
 
     const submitHandler = () => {
-        console.log('in the submit handler');
-        dispatch ({type: 'SEARCH_GIFS', payload: { name: searchGifs }})
+        console.log('in the submit handler', searchGifs);
+        dispatch ({type: 'SEARCH_GIFS', payload: searchGifs })
         setSearchGifs('');
         
         }
@@ -28,8 +28,6 @@ function Search() {
        
        <button onClick={submitHandler}> Search the GIFs  </button>
        
-
-
        
        
        </>
