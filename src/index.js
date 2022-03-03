@@ -14,6 +14,7 @@ import axios from 'axios';
 function* rootSaga() {
  /// put yield takeEverys here =-] 
     yield takeEvery('SEARCH_GIFS', searchGifs )
+    yield takeEvery('FETCH_FAVORITE', getFavoriteSaga)
 }
 
 // Create sagaMiddleware
@@ -51,6 +52,18 @@ const favoritesList = (state = [], action) => {
             return state;
     }
 };
+
+// Favorites Saga
+function* getFavoriteSaga() {
+    console.log('In getFavoriteSaga');
+    try {
+        const response = yield axios.get('/api/favorite');
+        yield put({type: "SET_FAVORITE", payload: response.data})
+    } catch (error) {
+        console.log('Error with Get:', error);
+        
+    }
+}
 
 
 
