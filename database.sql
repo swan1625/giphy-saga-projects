@@ -22,8 +22,6 @@ INSERT INTO "favorites" ("url") VALUES ('https://media4.giphy.com/media/uuvdeYTt
 
 
 
-
-
 -- Default categories. You may change them :)
 INSERT INTO "category" ("name")
 VALUES ('funny'), ('cohort'), ('cartoon'), ('nsfw'), ('meme');
