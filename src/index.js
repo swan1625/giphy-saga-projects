@@ -36,7 +36,7 @@ function* searchGifs(action){
 
 const searchResults = (state = [], action) => {
     switch (action.type) {
-        case 'SEARCH_RESULTS':
+        case 'SET_RESULTS':
             return action.payload;
         default:
             return state;
