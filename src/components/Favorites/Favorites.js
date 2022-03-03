@@ -19,6 +19,7 @@ function Favorites() {
       {favorites.map((favorite, i) => (
           <li key={i}>
             <img src={favorite.url}></img>
+            <button>Submit Drop Down</button>
           </li>
         ))}
       </ul>

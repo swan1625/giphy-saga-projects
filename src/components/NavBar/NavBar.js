@@ -10,6 +10,7 @@ function NavBar() {
                 <li><Link to="/#/favorites">Favorites</Link></li>
                 <li><Link to="/#/">Search</Link></li>
                 <p>click the link then refresh, just a wireframe</p>
+                
             </header>
         </Router>
     )
