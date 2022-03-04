@@ -20,10 +20,10 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   let newFav = req.body;
   console.log('In favorite.router.js and the req.body is:', newFav);
-  let sqlQuery = `INSERT INTO "favorites" ("url")
-                    VALUES ($1);`;
+  let sqlQuery = `INSERT INTO "favorites" ("url", "category_id")
+                    VALUES ($1, $2);`;
   // pool.query(queryText, [newFavorite.url, newFavorite.category_id])
-  pool.query(sqlQuery, [newFav.url])
+  pool.query(sqlQuery, [newFav, newFav])
 
   .then((response) => {
     console.log('Successful Post!!', response);

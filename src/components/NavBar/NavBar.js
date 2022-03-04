@@ -8,12 +8,12 @@ function NavBar() {
 
     const history = useHistory();
 
-    function handleAClick() {
+    function handleSearchClick() {
         console.log('Going to search!!');
         history.push('/');
     }
 
-    function handleTheClick() {
+    function handleFavClick() {
         console.log('Going to favs!!');
         history.push('/favorites');
     }
@@ -26,12 +26,9 @@ function NavBar() {
             <Router>
                 <header>
                     <h1>GIFS BABY</h1>
-                    {/* <li><Link to="/#/favorites" exact>Favorites</Link></li>
-                    <li><Link to="/#/" exact>Search</Link></li>
-                    <p>click the link then refresh, just a wireframe</p> */}
-                    {/* <button onClick={handleAClick}>Search View</button> */}
-                    <button onClick={handleAClick}>Search</button>
-                    <button onClick={handleTheClick}>Favorites View</button>
+                    <h2>Where do you want to go?</h2>
+                    <button onClick={handleSearchClick}>Search View</button>
+                    <button onClick={handleFavClick}>Favorites View</button>
 
                     
                 </header>
