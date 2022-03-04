@@ -18,7 +18,12 @@ function Favorites() {
       <ul>
       {favorites.map((favorite, i) => (
           <li key={i}>
-            <img src={favorite.url}></img>
+            <img src={favorite.url}></img><br></br>
+            {/* <button onClick={makeFunny}>funny</button>
+            <button onClick={makeCohort}>cohort</button>
+            <button onClick={makeCartoon}>cartoon</button>
+            <button onClick={makeNsfw}>nsfw</button>
+            <button onClick={makeMeme}>meme</button> */}
           </li>
         ))}
       </ul>
