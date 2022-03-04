@@ -21,7 +21,7 @@ function App(props) {
         <Route path="/" exact>
           <Search />
         </Route>
-        <Route path="/favorites">
+        <Route path="/favorites" exact>
           <Favorites />
         </Route>
 
