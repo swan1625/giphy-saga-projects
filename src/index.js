@@ -43,7 +43,7 @@ const searchResults = (state = [], action) => {
     }
 };   
 
-// Favorites Reducer
+// Favorites Reducer-------------------------------------------------------
 const favoritesList = (state = [], action) => {
     switch (action.type) {
         case 'SET_FAVORITE':
@@ -53,7 +53,7 @@ const favoritesList = (state = [], action) => {
     }
 };
 
-// Favorites Saga
+// Favorites Saga---------------------------------------------------------------
 function* getFavoriteSaga() {
     console.log('In getFavoriteSaga');
     try {
